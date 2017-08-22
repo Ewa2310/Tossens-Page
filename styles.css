@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+body {
+    font-family: Arial,sans-serif;
+}
+p {
+    font-size: 13px;
+    line-height: 1.5em;
+}
+header, footer {
+    background-color: #111111;
+    color: #ffffff;
+}
+header {
+    position: fixed;
+    height: 50px;
+    top: 0px;
+    width: 100%;
+    z-index: 100;
+}
+.logo {
+    font-size: 25px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    position: relative;
+    margin: 10px 0 0 20px;
+}
+.logo span::before {
+    content:"";
+    display: inline-block;
+    width: 12.5px;
+    height: 2.4px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 79.9px;
+}
+#hamburger {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    display: block;
+}
+#hamburger:hover .line {
+    background-color: #007fff;
+}
+.line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin-bottom: 5px;
+    background-color: #ffffff;
+}
+#mainNav {
+    background-color: #111;
+    margin-top: 10px;
+    list-style: none;
+    text-align: center;
+    animation: fadeIn 0.4s,
+               slideDown 0.5s;
+    display: none;
+}
+li a {
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 13px;
+}
+li a:hover {
+    background-color: #007fff;
+}
+.banner {
+    text-align: center;
+    overflow: hidden;
+    margin-top: 45px;
+}
+.rectangleDiv {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    cursor: pointer;
+    transform: rotate(-30deg);
+}
+#blueRectangle {
+    background-color: #007fff;
+}
+#blueRectangle:hover {
+     background-color: #004aaa;
+}
+#blackRectangle {
+    background-color: #111111;
+    position: relative;
+    top: 50px;
+}
+#blackRectangle:hover {
+    background-color: #000000;
+}
+h1 {
+    margin-top: 70px;
+    font-weight: normal;
+    padding: 10px;
+}
+h2 {
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+h3 {
+    font-size: 13px;
+    font-weight: normal;
+}
+button {
+    background-color: #007fff;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    font-size: 10px;
+    word-spacing: 0.2em;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #004aaa;
+}
+#about {
+    padding: 30px;
+    background-color: #007fff;
+    color: #ffffff;
+    width: 100%;
+    overflow: hidden;
+}
+.sectionLeft {
+    width: 25%;
+    float: left;
+}
+.sectionRight {
+    width: 75%;
+    float: right;
+}
+#expertise h2 {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 15px 20px;
+    margin-top: 10px;
+}
+#expertise p {
+    margin: 10px 10px 0 0;
+}
+.sectionDiv {
+    overflow: hidden;
+    height: 160px;
+    margin-bottom: 20px;
+}
+svg {
+    width: 35px;
+    height: auto;
+    margin-left: 15px;
+    cursor: pointer;
+}
+#contact {
+    background-color: #007fff;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+#contact p {
+    margin-top: 10px;
+    cursor: pointer;
+}
+footer {
+    padding: 10px 0;
+    text-align: center;
+    cursor: pointer;
+}
+footer:hover {
+    color: #007fff;
+}
+
+
+
+@keyframes fadeIn {
+   from {opacity: 0;
+        visibility: hidden;}
+    to {opacity: 1;
+         visibility: visible;}
+}
+@keyframes slideDown {
+    from {transform: translateY(-10px);}
+    to {transform: translateY(0px);}
+}
+
+
+@media screen and (min-width: 550px){
+    
+    p {
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    .rectangleDiv {
+        width: 140px;
+        height: 140px;
+    }
+    .sectionLeft {
+        padding-left: 20px;
+    }
+    #expertise h2 {
+        padding-left: 50px;
+    }
+}
+@media screen and (min-width: 690px){
+    #hamburger {
+        display: none;
+    }
+    .logo {
+        width: 20%;
+        margin-left: 30px;
+    }
+    #mainNav {
+        display: block;
+        width: 60%;
+        overflow: hidden;
+        float: right;
+        position: absolute;
+        right: 0px;
+        top: -10px;
+    }
+    li a {
+        display: inline-block;
+        width: 100px;
+        height: ;
+        padding-top: 20px;
+        float: left;
+    }
+    .banner {
+        height: 250px;
+    }
+    h1, h2, .button{
+        width: 50%;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    #expertise h2 {
+        width: 100%;
+    }
+    #blueRectangle {
+        float: right;
+        margin-right: 150px;
+    }
+    #blackRectangle {
+        float: right;
+        margin-right: 150px;
+        top: 0;
+    }
+    .sectionLeft {
+        padding-left: 50px;
+    }
+    #about {
+        padding: 20px;
+    } 
+}
+@media screen and (min-width: 840px){
+    #mainNav {
+        margin-right: -70px;
+    }
+    .banner {
+        height: 400px;
+    }
+    h1 {
+        margin-top: 120px;
+    }
+    h2 {
+        margin-top: 30px;
+    }
+    .rectangleDiv {
+        width: 200px;
+        height: 200px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    #about {
+        padding: 50px 30px 50px 0;
+    }
+    #expertise h2 {
+        font-size: 20px;
+    }
+    #expertise .sectionRight {
+        width: 50%;
+        margin-right: 200px;
+    }
+    #expertise .sectionLeft {
+        width: 10%;
+        margin-left: 200px;
+    }
+    #about p {
+        font-size: 25px;
+    }
+}
+
+
+
+
+
+
+
+
+
+

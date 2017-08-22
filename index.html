@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tossens Webpage</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+    
+        <!--HEADER-->
+        <header>
+            <div class="logo" title="Tossens Design Group">TOSS<span>E</span>NS</div>
+              <div id="hamburger" title="MENU">
+                  <span class="line"></span>
+                  <span class="line"></span>
+                  <span class="line"></span>
+              </div>
+              <nav>
+               <ul id="mainNav">
+                   <li><a href="#about">ABOUT</a></li>
+                   <li><a href="#expertise">EXPERTISE</a></li>
+                   <li><a href="">PORTFOLIO</a></li>
+                   <li><a href="#contact">CONTACT</a></li>
+               </ul>
+            </nav>
+        </header>
+        
+        <!--BANNER-->
+        <section class="banner">
+            <div id="blueRectangle" class="rectangleDiv"></div>
+            <h1>Design with clarity</h1>
+            <h2>WEB & PRINT DESIGN</h2>
+            <div class="button">
+                <button>VIEW PORTFOLIO</button>
+            </div>
+            <div id="blackRectangle" class="rectangleDiv"></div>
+        </section>
+        
+        <!--SECTION-->
+        <section id="about">
+            <div class="sectionLeft">
+                <h3>About</h3>
+            </div>
+            <div class="sectionRight">
+               <p>
+               Tossens Design is a Warsaw based studio, specializing in communication design. With a robust process rooted in design thinking methodology, user research and visualization, Tossens Design focuses on creating educative, accessibile solutions across print and web.
+               </p>
+            </div>
+        </section>
+        
+        <!--SECTION-->
+        <section id="expertise">
+            <h2>Expertise</h2>
+            <div class="sectionDiv">
+                <div class="sectionLeft">
+                    <svg viewBox="0 0 50 50">
+                        <circle cx="25" cy="21" r="20" fill="#007fff" />
+                        <circle cx="25" cy="17" r="5" fill="#ffffff" />
+                        <line x1="15" y1="28" x2="35" y2="28" stroke="#ffffff" stroke-width="3"/>
+                    </svg>
+                </div>
+                <div class="sectionRight">
+                    <h3>WEB DESIGN</h3>
+                    <p>
+                        Using design research and brand expertise, Tossens can help you create a targeted, compelling online platform for a business or portfolio.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="sectionDiv">
+                <div class="sectionLeft">
+                    <svg viewBox="0 0 50 50">
+                        <circle cx="25" cy="21" r="20" fill="#007fff" />
+                        <polygon points="18,13 33,13 25,22" fill="#ffffff" />
+                        <line x1="15" y1="28" x2="35" y2="28" stroke="#ffffff" stroke-width="3"/>
+                    </svg>
+                </div>
+                <div class="sectionRight">
+                    <h3>MARKETING</h3>
+                    <p>
+                        Our holistic approach to marketing and brand development, enables clients to create streamlined campaigns for print and web based solutions, including direct email and social media.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="sectionDiv">
+                <div class="sectionLeft">
+                    <svg viewBox="0 0 50 50">
+                        <circle cx="25" cy="21" r="20" fill="#007fff" />
+                         <line x1="15" y1="14" x2="35" y2="14" stroke="#ffffff" stroke-width="3"/>
+                          <line x1="15" y1="21" x2="35" y2="21" stroke="#ffffff" stroke-width="3"/>
+                           <line x1="15" y1="28" x2="35" y2="28" stroke="#ffffff" stroke-width="3"/>
+                    </svg>
+                </div>
+                <div class="sectionRight">
+                    <h3>EDUCATION</h3>
+                    <p>
+                        From brand identity to organizational strategy, we work closely with our clients to customize the workshop, education material and learning tools that support the engagement.
+                    </p>
+                </div>
+            </div>
+            
+        </section>
+        
+        <!--SECTION-->
+        <section id="contact">
+            <h3>CONTACT</h3>
+            <p>hello@tossensdesign.com</p>
+        </section>
+        
+        <!--FOOTER-->
+        <footer>
+            <p>2017 &copy; Tossens Design</p>
+        </footer>
+
+        <script>
+           function showMenu(){
+               
+               var btn = document.getElementById("hamburger");
+               var menu = document.getElementById("mainNav");
+               
+               btn.onclick = function(){
+                   
+                   if(menu.style.display == "none"){
+                       menu.style.display = "block";
+                   }
+                   else {
+                       menu.style.display = "none";
+                   }
+               }
+           }   
+            function hideMenu(){
+                 
+                var menu = document.getElementById("mainNav");
+                var links = document.getElementsByTagName("li");
+                    
+                for(i=0; i<links.length; i++){
+                    
+                      links[i].onclick = function(){
+                          
+                            if(menu.style.display == "block"){  
+                            menu.style.display = "none";
+                       }
+                  } 
+            }
+            }
+            showMenu(); 
+            hideMenu();
+        </script>
+    </body>
+</html>
