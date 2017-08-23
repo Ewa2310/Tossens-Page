@@ -115,38 +115,37 @@
         </footer>
 
         <script>
-           function showMenu(){
-               
-               var btn = document.getElementById("hamburger");
-               var menu = document.getElementById("mainNav");
-               
-               btn.onclick = function(){
+               function showMenu(){
                    
-                   if(menu.style.display == "none"){
-                       menu.style.display = "block";
-                   }
-                   else {
-                       menu.style.display = "none";
-                   }
-               }
-           }   
-            function hideMenu(){
-                 
-                var menu = document.getElementById("mainNav");
-                var links = document.getElementsByTagName("li");
-                    
-                for(i=0; i<links.length; i++){
-                    
-                      links[i].onclick = function(){
-                          
-                            if(menu.style.display == "block"){  
-                            menu.style.display = "none";
+                   var btn = document.getElementById("hamburger");
+                   var menu = document.getElementById("mainNav");
+               
+                   btn.onclick = function(){
+                       
+                       if(menu.className == ""){
+                          menu.className = "navShown"; 
                        }
-                  } 
-            }
-            }
-            showMenu(); 
-            hideMenu();
+                       else{
+                           menu.className = "";
+                       }
+                       }
+                   }
+               showMenu();
+            
+             
+              function hideMenu(){
+                   
+                  var menu = document.getElementById("mainNav");
+                  var links = document.getElementsByTagName("li");
+                  
+                  for(i=0; i<links.length; i++){
+                      links[i].onclick = function(){
+                          menu.className = "";
+                      }
+                  }
+              }
+              hideMenu();
+            
         </script>
     </body>
 </html>
